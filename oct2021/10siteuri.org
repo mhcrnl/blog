@@ -1,0 +1,55 @@
+#+title: Siteuri de cursuri online
+#+author:Mihai Cornel
+#+date: 2021-10-17
+
+* 10 Siteuri de cursuri online
+
+[[./img01.jpg]]
+
+
+
+  Internetul este o sursă incredibilă de informații, accesate doar printr-un 
+click. Aici poți găsi cursuri on line despre aproape orice domeniu de activitate
+.
+
+1) Coursera este una dintre cele mai puternice platforme de cursuri online.
+
+  Site: [[www.coursera.org]]
+
+  Cursuri: 
+
+2) Udemy
+
+   Site:
+
+3) Khanacademy
+   
+   Site:
+
+4) Standford edu
+
+   Site:
+
+5) Open culture
+
+   Site:
+
+6) Ted-ed
+
+   Site:
+
+7) National Geographic kids
+
+   Site:
+
+8) Duolingo
+
+   Site:
+
+9) Edx
+
+   Site:
+
+10)Lynda
+
+   Site:

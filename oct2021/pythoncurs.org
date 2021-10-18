@@ -1,0 +1,12 @@
+* Curs python
+
+(setenv "PATH" "/usr/bin/python3")
+
+[[http://www.cs.ubbcluj.ro/~istvanc/cursuri/Curs_FP.pdf][Carte despre python]]
+
+#+BEGIN_SRC python :results output
+print("Salut!")
+
+#+END_SRC
+
+#+RESULTS:
