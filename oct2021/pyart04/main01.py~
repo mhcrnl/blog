@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from tkinter import *
+import tkinter as tk
+from tkinter import ttk
+
+class Aplicatie(ttk.Frame):
+    def __init__(self, master):
+        super().__init__(master)
+        self.pack()
+
+        self.text_ent = ttk.Entry()
+        self.text_ent.pack()
+
+        # Crearea variabilei
+        self.continut = tk.StringVar()
+        # Adaugarea unei valori
+        self.continut.set("Acesta este textul continut.")
+        # In vidgetul text_ent adaugam conținutul vriabilei
+        self.text_ent["textvariable"] = self.continut
+
+        # Definim o apelare pentru afișarea continut
+        self.text_ent.bind('<Key-Return>', self.afiseaza_continut)
+
+    def afiseaza_continut(self, event):
+        print("Afiseaza continutul: ", self.continut.get())
+
+root = tk.Tk()
+aplicatia_mea = Aplicatie(root)
+aplicatia_mea.master.title("Aplicatia mea!")
+aplicatia_mea.master.maxsize(600, 400)
+aplicatia_mea.mainloop()

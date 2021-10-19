@@ -3,7 +3,9 @@
 # RUN: python3 fereastra.py
 #---------------------------------------------------------
 import tkinter as tk
-
+# Importarea modulului ttk mai nou
+from tkinter import ttk
+#---------------------------------------------------------
 class App(tk.Frame):
     def __init__(self, master):
         super().__init__(master)

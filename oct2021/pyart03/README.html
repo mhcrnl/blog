@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+td, th { border: 1px solid #c3c3c3; padding: 0 3px 0 3px; }
+table { border-collapse: collapse; }
+img { max-width: 100%; }
+</style>
+<meta name="generator" content="ReText 7.1.0">
+<title>README</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Fereastră creată în Tkinter</h1>
+<pre><code>Tkinter permite crearea de interfețe grafice(GUI) cu care utilizatorul poate interacționa.
+</code></pre>
+<pre><code class="python">#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# RUN: python3 fereastra.py
+#---------------------------------------------------
+import tkinter as tk
+
+class App(tk.Frame):
+    def __init__(self, master):
+        super().__init__(master)
+        self.pack()
+
+        self.entry = tk.Entry()
+        self.entry.pack()
+
+        # Create the Application variable.
+        self.contents = tk.StringVar()
+        # Set la o anumita valoare
+        self.contents.set(&quot;Aceasta este o variabila.&quot;)
+        self.entry[&quot;textvariable&quot;] = self.contents
+
+        self.entry.bind('&lt;Key-Return&gt;', self.print_contents)
+
+    def print_contents(self, event):
+        print(&quot;Acesta este continutul: &quot;, self.contents.get())
+
+root = tk.Tk()
+myapp = App(root)
+myapp.mainloop()
+</code></pre>
+
+<h2>Rularea programului produce urmatoarea fereastra</h2>
+<p><code>$ python3 fereastra.py</code></p>
+<p><img alt="" src="img01.png"></p>
+<h2>Librarii Python despre care trebuie să știi:</h2>
+<ul>
+<li>
+<p>Tkinter - Librarie Python pentru crearea interfetelor grafice.</p>
+<p><a href="https://docs.python.org/3/library/tkinter.html">https://docs.python.org/3/library/tkinter.html</a></p>
+<p><a href="https://realpython.com/python-gui-tkinter/">https://realpython.com/python-gui-tkinter/</a></p>
+<p><a href="https://wiki.python.org/moin/TkInter">https://wiki.python.org/moin/TkInter</a></p>
+</li>
+</ul>
+<h2>Articole pe blog:</h2>
+
+</body>
+</html>

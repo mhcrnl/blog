@@ -42,3 +42,8 @@ myapp.mainloop()
     [https://docs.python.org/3/library/tkinter.html](https://docs.python.org/3/library/tkinter.html)
 
     [https://realpython.com/python-gui-tkinter/](https://realpython.com/python-gui-tkinter/)
+
+    [https://wiki.python.org/moin/TkInter](https://wiki.python.org/moin/TkInter)
+
+## Articole pe blog:
+
