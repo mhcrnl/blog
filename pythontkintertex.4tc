@@ -1,0 +1,9 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{0.1}{\csname a:TocLink\endcsname{1}{x1-10000.1}{QQ2-1-1}{Python Tkiner}}{1}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-1001}{}{main01.py}}{3}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-1022}{}{/home/mhcrnl/Desktop/Blog/oct2021/pyart04/main.py}}{3}\relax 
+\doTocEntry\tocsection{0.2}{\csname a:TocLink\endcsname{1}{x1-20000.2}{QQ2-1-4}{Python tkinter.ttk}}{3}\relax 
+\doTocEntry\tocsubsection{0.2.1}{\csname a:TocLink\endcsname{1}{x1-30000.2.1}{QQ2-1-5}{Button}}{7}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-40000.2.1}{QQ2-1-6}{Buton simplu}}{9}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4001}{}{main03.py}}{9}\relax 
+\doTocEntry\tocsubsection{0.2.2}{\csname a:TocLink\endcsname{1}{x1-50000.2.2}{QQ2-1-8}{Checkbox}}{9}\relax 

@@ -1,0 +1,1439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="pythontkintertex.tex"> 
+<link rel="stylesheet" type="text/css" href="pythontkintertex.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><span class="titlemark">0.1   </span> <a 
+ id="x1-10000.1"></a>Python Tkiner</h3>
+<!--l. 15--><p class="noindent" >Tkinter este un modul Python pentru crearea interfe<img 
+src="pythontkintertex0x.png" alt="t,   "  class="oalign" >elor grafice(GUI) <img 
+src="pythontkintertex1x.png" alt="s,   "  class="oalign" >i este
+inclus în toate distribu<img 
+src="pythontkintertex2x.png" alt="t,   "  class="oalign" >iile standard Python. Acest modul ofer&#x0103; o interfa<img 
+src="pythontkintertex3x.png" alt="t,   "  class="oalign" >&#x0103;
+pentru setul de instrumente Tk <img 
+src="pythontkintertex4x.png" alt="s,   "  class="oalign" >i func<img 
+src="pythontkintertex5x.png" alt="t,   "  class="oalign" >ioneaz&#x0103; pe modelul orientat obiect.
+Setul de instrumente Tk este o colec<img 
+src="pythontkintertex6x.png" alt="t,   "  class="oalign" >ie multiplatform&#x0103; de elemente de control
+grafic, cunoscute sub numele de widget-uri, pentru construirea interfe<img 
+src="pythontkintertex7x.png" alt="t,   "  class="oalign" >elor
+grafice.
+<!--l. 17--><p class="indent" >   Pentru verificarea versiunii Tcl/Tk în terminal introduce<img 
+src="pythontkintertex8x.png" alt="t,   "  class="oalign" >i:
+
+   <div class="verbatim" id="verbatim-1">
+$&#x00A0;tclsh
+&#x00A0;<br />%&#x00A0;info&#x00A0;patchlevel
+&#x00A0;<br />8.6.10
+</div>
+<!--l. 22--><p class="nopar" >
+<!--l. 24--><p class="indent" >   Pentru a verifica instalarea corect&#x0103; a modulului Tkinter în terminal introduce<img 
+src="pythontkintertex9x.png" alt="t,
+"  class="oalign" >i comanda:
+
+   <div class="verbatim" id="verbatim-2">
+$&#x00A0;python3&#x00A0;-m&#x00A0;tkinter
+</div>
+<!--l. 28--><p class="nopar" >
+<!--l. 30--><p class="indent" >   Aceast&#x0103; comanda deschide urm&#x0103;toarea fereastr&#x0103;:
+<!--l. 32--><p class="indent" >   <img 
+src="/home/mhcrnl/Desktop/Blog/img02.png" alt="PIC"  
+width="390" height="390" >
+<!--l. 34--><p class="indent" >   Acest modul ofer&#x0103; utilizatorilor Python o modalitate simpl&#x0103; de a crea
+elemente grafice folosind widgeturile g&#x0103;site în setul de instrumente Tk.
+Widget-urile Tk pot fi folosite pentru a construi butoane, meniuri, câmpuri de
+date etc. într-o aplica<img 
+src="pythontkintertex10x.png" alt="t
+,   "  class="oalign" >ie Python. Odat&#x0103; create, aceste elemente grafice pot fi
+asociate sau pot interac<img 
+src="pythontkintertex11x.png" alt="t,   "  class="oalign" >iona cu caracteristici, func<img 
+src="pythontkintertex12x.png" alt="t,   "  class="oalign" >ionalita<img 
+src="pythontkintertex13x.png" alt="t,   "  class="oalign" >i, metode, date
+sau chiar alte widgeturi.
+<!--l. 36--><p class="indent" >   De exemplu, un widget de buton poate accepta clicuri de mouse <img 
+src="pythontkintertex14x.png" alt="s,   "  class="oalign" >i poate fi,
+de asemenea, programat pentru a efectua un fel de ac<img 
+src="pythontkintertex15x.png" alt="t,   "  class="oalign" >iune, cum ar fi ie<img 
+src="pythontkintertex16x.png" alt="s,   "  class="oalign" >irea
+din aplica<img 
+src="pythontkintertex17x.png" alt="t,   "  class="oalign" >ie.
+<!--l. 38--><p class="indent" >   Aceasta este un program Python cu Tkinter <img 
+src="pythontkintertex18x.png" alt="s,   "  class="oalign" >i rezultatul dup&#x0103; rularea
+programului: <!--l. 39--><div class="lstinputlisting">
+<a 
+ id="x1-1001"></a>
+   <span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1002r1"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">!/</span><span 
+class="cmitt-10x-x-120">usr</span><span 
+class="cmitt-10x-x-120">/</span><span 
+class="cmitt-10x-x-120">bin</span><span 
+class="cmitt-10x-x-120">/</span><span 
+class="cmitt-10x-x-120">python3</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1003r2"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">-*-</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">coding</span><span 
+class="cmitt-10x-x-120">:</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">utf</span><span 
+class="cmitt-10x-x-120">-8</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">-*-</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1004r3"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">FILE</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">:</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">main01</span><span 
+class="cmitt-10x-x-120">.</span><span 
+class="cmitt-10x-x-120">py</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1005r4"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">RUN</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">:</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">python3</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">main01</span><span 
+class="cmitt-10x-x-120">.</span><span 
+class="cmitt-10x-x-120">py</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1006r5"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">-------------------------------------------------</span><span 
+class="cmitt-10x-x-120">BEGIN</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">file</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1007r6"></a></span><span 
+class="cmtt-12">from</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">*</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1008r7"></a></span><span 
+class="cmtt-12">from</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1009r8"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1010r9"></a></span><span 
+class="cmtt-12">root</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">Tk</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1011r10"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1012r11"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Frame</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">root</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">padding</span><span 
+class="cmtt-12">=10)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1013r12"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">grid</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1014r13"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1015r14"></a></span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Label</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">text</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Salut</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">).</span><span 
+class="cmtt-12">grid</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">column</span><span 
+class="cmtt-12">=0,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">row</span><span 
+class="cmtt-12">=0)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1016r15"></a></span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Button</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">text</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Inchide</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">root</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">destroy</span><span 
+class="cmtt-12">).</span><span 
+class="cmtt-12">grid</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1017r16"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">column</span><span 
+class="cmtt-12">=1,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">row</span><span 
+class="cmtt-12">=0)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1018r17"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1019r18"></a></span><span 
+class="cmtt-12">root</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">mainloop</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1020r19"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">----------------------------------------------------</span><span 
+class="cmitt-10x-x-120">END</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">file</span>
+   </div>
+<!--l. 40--><p class="noindent" ><img 
+src="img01.png" alt="PIC"  
+width="390" height="390" >
+   <!--l. 42-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1021r1"></a></span><span 
+class="cmtt-12">print</span><span 
+class="cmtt-12">("</span><span 
+class="cmtt-12">hello</span><span 
+class="cmtt-12">")</span>
+   </div>
+   <!--l. 46--><div class="lstinputlisting">
+<a 
+ id="x1-1022"></a>
+   <span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1023r1"></a></span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">!/</span><span 
+class="cmitt-10x-x-120">usr</span><span 
+class="cmitt-10x-x-120">/</span><span 
+class="cmitt-10x-x-120">bin</span><span 
+class="cmitt-10x-x-120">/</span><span 
+class="cmitt-10x-x-120">env</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">python3</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1024r2"></a></span><span 
+class="cmitt-10x-x-120">"""</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1025r3"></a></span><span 
+class="cmitt-10x-x-120">Tkinter</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">template</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">file</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1026r4"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1027r5"></a></span><span 
+class="cmitt-10x-x-120">In</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">this</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">file</span><span 
+class="cmitt-10x-x-120">,</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">we</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">use</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">the</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">pack</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">manager</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">to</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">create</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">an</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">app</span><span 
+class="cmitt-10x-x-120">.</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1028r6"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1029r7"></a></span><span 
+class="cmitt-10x-x-120">Author</span><span 
+class="cmitt-10x-x-120">:</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">mhcrnl@gmail</span><span 
+class="cmitt-10x-x-120">.</span><span 
+class="cmitt-10x-x-120">com</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1030r8"></a></span><span 
+class="cmitt-10x-x-120">-------------------------------------------------------------</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1031r9"></a></span><span 
+class="cmitt-10x-x-120">"""</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1032r10"></a></span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">as</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1033r11"></a></span><span 
+class="cmtt-12">from</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">Menu</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1034r12"></a></span><span 
+class="cmtt-12">from</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">messagebox</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">showinfo</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1035r13"></a></span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">sys</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1036r14"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1037r15"></a></span><span 
+class="cmtt-12">class</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">App</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Tk</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1038r16"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">def</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">__init__</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1039r17"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">super</span><span 
+class="cmtt-12">().</span><span 
+class="cmtt-12">__init__</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1040r18"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1041r19"></a></span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">configure</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">the</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">root</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">window</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1042r20"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">title</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">My</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">Awesome</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">App</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1043r21"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">geometry</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">450</span><span 
+class="cmtt-12">x350</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1044r22"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1045r23"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">p1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">PhotoImage</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">file</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#8217;</span><span 
+class="cmtt-12">teamwork</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">png</span><span 
+class="cmtt-12">&#8217;</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1046r24"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">iconphoto</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">False</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">p1</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1047r25"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1048r26"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">config</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">menu</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">MenuBar</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">))</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1049r27"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1050r28"></a></span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">label</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1051r29"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1052r30"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Label</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">text</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Hello</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">Tkinter</span><span 
+class="cmtt-12">!</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1053r31"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">pack</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1054r32"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1055r33"></a></span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">button</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1056r34"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">button</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Button</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">text</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Click</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">ME</span><span 
+class="cmtt-12">!</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1057r35"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">button</span><span 
+class="cmtt-12">[</span><span 
+class="cmtt-12">&#8217;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">&#8217;</span><span 
+class="cmtt-12">]</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">button_clicked</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1058r36"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">button</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">pack</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1059r37"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1060r38"></a></span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">&#x00A0;</span><span 
+class="cmitt-10x-x-120">#</span><span 
+class="cmitt-10x-x-120">self</span><span 
+class="cmitt-10x-x-120">.</span><span 
+class="cmitt-10x-x-120">config</span><span 
+class="cmitt-10x-x-120">(</span><span 
+class="cmitt-10x-x-120">menu</span><span 
+class="cmitt-10x-x-120">=</span><span 
+class="cmitt-10x-x-120">MenuBar</span><span 
+class="cmitt-10x-x-120">(</span><span 
+class="cmitt-10x-x-120">self</span><span 
+class="cmitt-10x-x-120">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1061r39"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1062r40"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">def</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">button_clicked</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1063r41"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">showinfo</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">title</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Information</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1064r42"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">message</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Hello</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">Tkinter</span><span 
+class="cmtt-12">!</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1065r43"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1066r44"></a></span><span 
+class="cmtt-12">class</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">MenuBar</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Menu</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1067r45"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">def</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">__init__</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">parent</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1068r46"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Menu</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">__init__</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">parent</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1069r47"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1070r48"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">filemenu</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Menu</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tearoff</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">False</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1071r49"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_cascade</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">File</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">underline</span><span 
+class="cmtt-12">=0,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">menu</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">filemenu</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1072r50"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">filemenu</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_command</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">New</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">callback</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1073r51"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">filemenu</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_separator</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1074r52"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">filemenu</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_command</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Exit</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">underline</span><span 
+class="cmtt-12">=1,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">quit</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1075r53"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1076r54"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">helpmenu</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Menu</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tearoff</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">False</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1077r55"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_cascade</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">Help</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">menu</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">helpmenu</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1078r56"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">helpmenu</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">add_command</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">label</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">About</span><span 
+class="cmtt-12">...</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">callback</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1079r57"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1080r58"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">def</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">quit</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1081r59"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">sys</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">exit</span><span 
+class="cmtt-12">(0)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1082r60"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1083r61"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">def</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">callback</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">self</span><span 
+class="cmtt-12">):</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1084r62"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">print</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">called</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">the</span><span 
+class="cmtt-12">&#x2423;</span><span 
+class="cmtt-12">callback</span><span 
+class="cmtt-12">!</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1085r63"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1086r64"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1087r65"></a></span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1088r66"></a></span><span 
+class="cmtt-12">if</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">__name__</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">==</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">__main__</span><span 
+class="cmtt-12">"</span><span 
+class="cmtt-12">:</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1089r67"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">app</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">App</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1090r68"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">app</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">mainloop</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-1091r69"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">exit</span><span 
+class="cmtt-12">(0)</span>
+   </div>
+<!--l. 48--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">0.2   </span> <a 
+ id="x1-20000.2"></a>Python tkinter.ttk</h3>
+
+<!--l. 49--><p class="noindent" >Vechile widget-uri clasice Tkinter le-a introdus în 1991. Cele mai noi widget-uri
+tematice ttk au fost ad&#x0103;ugate în 2007 cu Tk 8.5. Cele mai noi widget-uri tematice
+ttk înlocuiesc multe (dar nu toate) widget-uri clasice. Exist&#x0103; diferite moduri de a
+importa modulul ttk. Dac&#x0103; prefera<img 
+src="pythontkintertex19x.png" alt="t,   "  class="oalign" >i ca toate widget-urile <img 
+src="pythontkintertex20x.png" alt="s,   "  class="oalign" >i alte caracteristici
+ale Tkinter <img 
+src="pythontkintertex21x.png" alt="s
+,   "  class="oalign" >i ttk s&#x0103; fie în spa<img 
+src="pythontkintertex22x.png" alt="t
+,   "  class="oalign" >iul dvs. de nume global, utiliza<img 
+src="pythontkintertex23x.png" alt="t
+ ,   "  class="oalign" >i aceast&#x0103; form&#x0103;
+de import:
+
+   <div class="verbatim" id="verbatim-3">
+&#x00A0;&#x00A0;from&#x00A0;tkinter&#x00A0;import&#x00A0;*
+&#x00A0;<br />&#x00A0;&#x00A0;from&#x00A0;ttk&#x00A0;import&#x00A0;*
+</div>
+<!--l. 55--><p class="nopar" > Este important s&#x0103; face<img 
+src="pythontkintertex24x.png" alt="t,   "  class="oalign" >i aceste dou&#x0103; importuri în aceast&#x0103; ordine, astfel încât
+toate tipurile de widget-uri de la ttk s&#x0103; înlocuiasc&#x0103; widget-urile echivalente de la
+Tkinter. De exemplu, toate widgeturile Button vor proveni de la ttk <img 
+src="pythontkintertex25x.png" alt="s,   "  class="oalign" >i nu de la
+Tkinter. În aplica<img 
+src="pythontkintertex26x.png" alt="t,   "  class="oalign" >ii mai complexe, unde utiliza<img 
+src="pythontkintertex27x.png" alt="t,   "  class="oalign" >i mai multe module importate,
+poate îmbun&#x0103;t&#x0103;<img 
+src="pythontkintertex28x.png" alt="t,   "  class="oalign" >i foarte mult lizibilitatea codului dvs. dac&#x0103; practica<img 
+src="pythontkintertex29x.png" alt="t,   "  class="oalign" >i o igien&#x0103;
+sigur&#x0103; a spa<img 
+src="pythontkintertex30x.png" alt="t,   "  class="oalign" >iului de nume: importa<img 
+src="pythontkintertex31x.png" alt="t,   "  class="oalign" >i toate modulele dvs. folosind sintaxa
+&#8222;import modulename&#8221;. Acest lucru necesit&#x0103; doar un pic mai mult de tastare, dar
+are marele avantaj c&#x0103; pute<img 
+src="pythontkintertex32x.png" alt="t,   "  class="oalign" >i privi o referin<img 
+src="pythontkintertex33x.png" alt="t,   "  class="oalign" >&#x0103; la ceva <img 
+src="pythontkintertex34x.png" alt="s,   "  class="oalign" >i pute<img 
+src="pythontkintertex35x.png" alt="t,   "  class="oalign" >i spune de unde
+a venit.
+
+   <div class="verbatim" id="verbatim-4">
+&#x00A0;&#x00A0;&#x00A0;import&#x00A0;ttk
+</div>
+<!--l. 60--><p class="nopar" > Dup&#x0103; acest import, ttk.Label este constructorul widge-tului Label, ttk.Button
+este un Button <img 
+src="pythontkintertex36x.png" alt="s,   "  class="oalign" >i a<img 
+src="pythontkintertex37x.png" alt="s,   "  class="oalign" >a mai departe. Dac&#x0103; trebuie s&#x0103; face<img 
+src="pythontkintertex38x.png" alt="t,   "  class="oalign" >i referire la articole
+din modulul Tkinter, acesta este disponibil sub numele de ttk.Tkinter. De
+exemplu, codul de ancorare pentru &#8222;nord-est&#8221; este ttk.Tkinter.NE. În schimb,
+pute<img 
+src="pythontkintertex39x.png" alt="t,   "  class="oalign" >i importa Tkinter separat în acest fel:
+
+   <div class="verbatim" id="verbatim-5">
+&#x00A0;&#x00A0;&#x00A0;import&#x00A0;Tkinter&#x00A0;as&#x00A0;tk
+</div>
+<!--l. 66--><p class="nopar" > Dup&#x0103; aceast&#x0103; form&#x0103; de import, codul pentru &#8222;nord-est&#8221; este tk.NE.
+<!--l. 69--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">0.2.1   </span> <a 
+ id="x1-30000.2.1"></a>Button</h4>
+<!--l. 70--><p class="noindent" >Widget-ul Button reprezint&#x0103; un element care poate fi ap&#x0103;sat (clik) în aplica<img 
+src="pythontkintertex40x.png" alt="t,   "  class="oalign" >ii.
+De obicei, utiliza<img 
+src="pythontkintertex41x.png" alt="t,   "  class="oalign" >i un text sau o imagine pentru a afi<img 
+src="pythontkintertex42x.png" alt="s,   "  class="oalign" >a ac<img 
+src="pythontkintertex43x.png" alt="t,   "  class="oalign" >iunea care va fi
+efectuat&#x0103; atunci când face<img 
+src="pythontkintertex44x.png" alt="t,   "  class="oalign" >i clic.
+<!--l. 72--><p class="indent" >   Butoanele pot afi<img 
+src="pythontkintertex45x.png" alt="s,   "  class="oalign" >a text într-un singur font. Cu toate acestea, textul poate
+cuprinde mai multe linii. În plus, pute<img 
+src="pythontkintertex46x.png" alt="t
+,   "  class="oalign" >i face unul dintre caracterele subliniate
+pentru a marca o comand&#x0103; rapid&#x0103; de la tastatur&#x0103;.
+<!--l. 74--><p class="indent" >   Pentru a invoca automat o func<img 
+src="pythontkintertex47x.png" alt="t,   "  class="oalign" >ie sau o metod&#x0103; a unei clase atunci când se
+face clic pe buton, atribui<img 
+src="pythontkintertex48x.png" alt="t,   "  class="oalign" >i op<img 
+src="pythontkintertex49x.png" alt="t,   "  class="oalign" >iunea de comand&#x0103; func<img 
+src="pythontkintertex50x.png" alt="t,   "  class="oalign" >iei sau metodei.
+Aceasta se nume<img 
+src="pythontkintertex51x.png" alt="s,   "  class="oalign" >te legarea comenzii în Tkinter.
+<!--l. 76--><p class="indent" >   Pentru a crea un buton, utiliza<img 
+src="pythontkintertex52x.png" alt="t
+,   "  class="oalign" >i constructorul ttk.Button dup&#x0103; cum
+urmeaz&#x0103;:
+
+   <div class="verbatim" id="verbatim-6">
+&#x00A0;&#x00A0;buton&#x00A0;=&#x00A0;ttk.Button(container,&#x00A0;**option)
+</div>
+<!--l. 79--><p class="nopar" > Un buton are multe op<img 
+src="pythontkintertex53x.png" alt="t,   "  class="oalign" >iuni. Cu toate acestea, cele tipice sunt acestea:
+
+   <div class="verbatim" id="verbatim-7">
+&#x00A0;&#x00A0;buton&#x00A0;=&#x00A0;ttk.Button(container,&#x00A0;text,&#x00A0;command)
+</div>
+<!--l. 83--><p class="nopar" > În aceast&#x0103; sintax&#x0103;:
+<!--l. 86--><p class="indent" >   * container este componenta p&#x0103;rinte pe care plasa<img 
+src="pythontkintertex54x.png" alt="t,   "  class="oalign" >i butonul.
+<!--l. 88--><p class="indent" >   * text este eticheta butonului.
+<!--l. 90--><p class="indent" >   * command specific&#x0103; o func<img 
+src="pythontkintertex55x.png" alt="t,   "  class="oalign" >ie de apel invers care va fi apelat&#x0103; automat
+atunci când butonul a fost ap&#x0103;sat.&#x2026;
+   <h5 class="subsubsectionHead"><a 
+ id="x1-40000.2.1"></a>Buton simplu</h5>
+   <!--l. 92--><div class="lstinputlisting">
+<a 
+ id="x1-4001"></a>
+   <span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4002r1"></a></span><span 
+class="cmtt-12">#!/</span><span 
+class="cmtt-12">usr</span><span 
+class="cmtt-12">/</span><span 
+class="cmtt-12">bin</span><span 
+class="cmtt-12">/</span><span 
+class="cmtt-12">python3</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4003r2"></a></span><span 
+class="cmtt-12">#-------------------------------------------------</span><span 
+class="cmtt-12">BEGIN</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">file</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4004r3"></a></span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">as</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4005r4"></a></span><span 
+class="cmtt-12">from</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tkinter</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">import</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4006r5"></a></span><span 
+class="cmtt-12">#</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">Ferastra</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">root</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4007r6"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">tk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Tk</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4008r7"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">geometry</span><span 
+class="cmtt-12">("300</span><span 
+class="cmtt-12">x200</span><span 
+class="cmtt-12">")</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4009r8"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">resizable</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">False</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">False</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4010r9"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">title</span><span 
+class="cmtt-12">("</span><span 
+class="cmtt-12">Fereastra</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">cu</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">button</span><span 
+class="cmtt-12">")</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4011r10"></a></span><span 
+class="cmtt-12">#</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">Exit</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">buton</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4012r11"></a></span><span 
+class="cmtt-12">exit_btn</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ttk</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">Button</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">text</span><span 
+class="cmtt-12">="</span><span 
+class="cmtt-12">Exit</span><span 
+class="cmtt-12">",</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4013r12"></a></span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">command</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">quit</span><span 
+class="cmtt-12">())</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4014r13"></a></span><span 
+class="cmtt-12">exit_btn</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">pack</span><span 
+class="cmtt-12">(</span><span 
+class="cmtt-12">ipadx</span><span 
+class="cmtt-12">=5,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">ipady</span><span 
+class="cmtt-12">=5,</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">expand</span><span 
+class="cmtt-12">=</span><span 
+class="cmtt-12">True</span><span 
+class="cmtt-12">)</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4015r14"></a></span><span 
+class="cmtt-12">fereastra</span><span 
+class="cmtt-12">.</span><span 
+class="cmtt-12">mainloop</span><span 
+class="cmtt-12">()</span><span 
+class="cmtt-12">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-4016r15"></a></span><span 
+class="cmtt-12">#------------------------------------------------</span><span 
+class="cmtt-12">END</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">file</span>
+   </div>
+<!--l. 93--><p class="noindent" ><img 
+src="img03.png" alt="PIC"  
+width="390" height="390" >
+<!--l. 95--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">0.2.2   </span> <a 
+ id="x1-50000.2.2"></a>Checkbox</h4>
+
+   <div class="verbatim" id="verbatim-8">
+&#x00A0;&#x00A0;print(\Hello,&#x00A0;World!")
+</div>
+<!--l. 100--><p class="nopar" >
+<!--l. 109--><p class="indent" >   <img 
+src="/home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png" alt="PIC"  
+width="390" height="390" >
+    
+</body></html> 
+
+
+
