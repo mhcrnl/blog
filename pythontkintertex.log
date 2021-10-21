@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.18)  19 OCT 2021 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.18)  20 OCT 2021 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,57 +493,316 @@ File: img03.png Graphic file (type png)
 <use img03.png>
 Package pdftex.def Info: img03.png  used on input line 84.
 (pdftex.def)             Requested size: 390.0pt x 308.64749pt.
+(./stilttkbuton.py [5 <./img03.png>]
+Overfull \hbox (40.04926pt too wide) in paragraph at lines 5--6
+[][][][][][][] 
+ []
 
-Overfull \hbox (4.56535pt too wide) in paragraph at lines 93--94
+
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 15--17
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 26--93
+[][][][][][][] 
+ []
+
+<stilttkbuton.png, id=165, 321.2pt x 155.58125pt>
+File: stilttkbuton.png Graphic file (type png)
+<use stilttkbuton.png>
+Package pdftex.def Info: stilttkbuton.png  used on input line 94.
+(pdftex.def)             Requested size: 390.0pt x 188.91147pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./stilttkbuton.png>] (./stilttkbuton02.py
+Overfull \hbox (40.04926pt too wide) in paragraph at lines 5--6
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 15--17
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 26--97
+[][][][][][][] 
+ []
+
+<stilttkbuton02.png, id=197, 321.2pt x 155.58125pt>
+File: stilttkbuton02.png Graphic file (type png)
+<use stilttkbuton02.png>
+Package pdftex.def Info: stilttkbuton02.png  used on input line 98.
+(pdftex.def)             Requested size: 390.0pt x 188.91147pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+(./stilttkbuton03.py
+Overfull \hbox (40.04926pt too wide) in paragraph at lines 5--6
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 15--16
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.2992pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+ [8 <./stilttkbuton02.png>]
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 btn2 = Button(root, text="Apasă-
+                                      mă!", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte "83.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 btn2 = Button(root, text="Apasă-mă!
+                                          ", command=None)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 28--102
+[][][][][][][] 
+ []
+
+<stilttkbuton03.png, id=260, 321.2pt x 155.58125pt>
+File: stilttkbuton03.png Graphic file (type png)
+<use stilttkbuton03.png>
+Package pdftex.def Info: stilttkbuton03.png  used on input line 103.
+(pdftex.def)             Requested size: 390.0pt x 188.91147pt.
+
+Overfull \hbox (4.56535pt too wide) in paragraph at lines 112--113
 []\OT1/cmr/m/n/12 Pentru a crea o caset^^Ua de selectare, utiliza[]i constructo
 rul ttk.Checkbutton: 
  []
 
-[5 <./img03.png>] (./main04.py)
-<img04.png, id=163, 303.1325pt x 290.08376pt>
+[9 <./stilttkbuton03.png>] (./main04.py)
+<img04.png, id=272, 303.1325pt x 290.08376pt>
 File: img04.png Graphic file (type png)
 <use img04.png>
-Package pdftex.def Info: img04.png  used on input line 110.
+Package pdftex.def Info: img04.png  used on input line 129.
 (pdftex.def)             Requested size: 75.78293pt x 72.52075pt.
- [6]
-Overfull \hbox (0.64456pt too wide) in paragraph at lines 125--126
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (0.64456pt too wide) in paragraph at lines 144--145
 \OT1/cmr/m/n/12 De obicei, se asociaz^^Ua valoarea curent^^Ua a casetei de text
  cu un obiect StringVar
  []
 
-[7 <./img04.png>] [8]
-</home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png, id=205, 622.325pt x 456.7
+[11 <./img04.png>] [12]
+</home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png, id=314, 622.325pt x 456.7
 0625pt>
 File: /home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png Graphic file (type pn
 g)
 <use /home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png>
 Package pdftex.def Info: /home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png  u
-sed on input line 188.
+sed on input line 207.
 (pdftex.def)             Requested size: 155.58086pt x 114.17627pt.
 
-Overfull \hbox (17.66898pt too wide) in paragraph at lines 188--189
+Overfull \hbox (17.66898pt too wide) in paragraph at lines 207--208
 [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-[9 </home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
+[13 </home/mhcrnl/Desktop/Blog/oct2021/pyart04/img01.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
 
 (./pythontkintertex.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `pythontkintertex.out' has not changed.
 (rerunfilecheck)             Checksum: 4486C6453285986A3AC89EEF5512F75A;1286.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
  ) 
 Here is how much of TeX's memory you used:
- 9322 strings out of 483065
- 132103 string characters out of 5963549
- 594310 words of memory out of 5000000
- 24094 multiletter control sequences out of 15000+600000
+ 9478 strings out of 483065
+ 134326 string characters out of 5963549
+ 595310 words of memory out of 5000000
+ 24151 multiletter control sequences out of 15000+600000
  540083 words of font info for 52 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 34i,7n,42p,500b,1745s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,7n,42p,500b,1747s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/mhcrnl/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
 0pk> </home/mhcrnl/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.
 600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -553,10 +812,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on pythontkintertex.pdf (9 pages, 132281 bytes).
+Output written on pythontkintertex.pdf (13 pages, 157788 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
- 94 named destinations out of 1000 (max. 500000)
- 194 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

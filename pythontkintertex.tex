@@ -66,7 +66,7 @@ Pentru a invoca automat o funcție sau o metodă a unei clase atunci când se fa
 
 Pentru a crea un buton, utilizați constructorul ttk.Button după cum urmează:
 \begin{verbatim}
-  buton = ttk.Button(container, **option)
+   buton = ttk.Button(container, **option)
 \end{verbatim}
 Un buton are multe opțiuni.  Cu toate acestea, cele tipice sunt acestea:
 \begin{verbatim}
@@ -82,6 +82,25 @@ Un buton are multe opțiuni.  Cu toate acestea, cele tipice sunt acestea:
 \subsubsection{Buton simplu}
 \lstinputlisting{main03.py}
 \includegraphics[width=\linewidth]{img03.png}
+
+%----------------------------------------
+\subsubsection{Stilizarea unui buton ttk}
+Stilizarea unui buton ttk, presupune crearea unui obiect Style după cum urmează:
+\begin{verbatim}
+     stil = ttk.Style()
+\end{verbatim}
+Codul de mai jos adauga stilizare doar butoanelor selectate în care trecem optiunea de stil.
+\lstinputlisting{stilttkbuton.py}
+\includegraphics[width=\linewidth]{stilttkbuton.png}
+%---------------------------------------------------
+\subsubsection{Aplicarea stilului tuturor butoanelor}
+\lstinputlisting{stilttkbuton02.py}
+\includegraphics[width=\linewidth]{stilttkbuton02.png}
+%-----------------------------------------------------
+\subsubsection{Schimbarea culorii butoanelor la trecera mouse-ului }
+Acum, dacă doriți să schimbați aspectul butoanelor prin mișcarea mouse-ului, adică, când trecem mouse-ul peste buton, acesta își va schimba culoarea atunci când îl apăsăm, va schimba culoarea și așa mai departe.
+\lstinputlisting{stilttkbuton03.py}
+\includegraphics[width=\linewidth]{stilttkbuton03.png}
 
 \subsection{Checkbox}
 O casetă de selectare este un widget care vă permite să bifați și debifați.
